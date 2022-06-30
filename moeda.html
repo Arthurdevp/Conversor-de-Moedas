@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Conversor </title>
+    
+    <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
+    </script> 
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script> 
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> 
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href= "https://fonts.googleapis.com/css2?family=Amiri&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- linking style.css file-->
+    <link rel="stylesheet" href="moeda.css">       
+</head>
+<body>
+    <!-- Currency Converter -->
+    <h1 class="heading text-center display-2">
+        Moedas
+    </h1> 
+    <hr>
+    <div class="container"> 
+    <div class="main"> 
+    <div class="form-group"> 
+    <label for="oamount"> Valor para converter : </label> 
+    <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount"> </div>
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="input-group mb-3"> 
+    <div class="input-group-prepend"> 
+        <span class="input-group-text">De</span> 
+    </div>
+    <select class="form-control from" id="sel1"> 
+        <option value="">Escolha um …</option> 
+        <option value="USD">USD (Dólar Americano)</option> 
+        <option value="AED">AED (Dirrame dos Emirados Árabes Unidos)</option> 
+        <option value="ARS">ARS (Peso Argentino)</option> 
+        <option value="AUD">AUD (Dólar Australiano)</option> 
+        <option value="BGN">BGN (Lev Búlgaro)</option> 
+        <option value="BRL">BRL (Real Brasileiro)</option> 
+        <option value="BSD">BSD (Dólar Baamense)</option> 
+        <option value="CAD">CAD (Dólar Canadense)</option> 
+        <option value="CHF">CHF (Franco Suíço)</option> 
+        <option value="CLP">CLP (Peso Chileno)</option> 
+        <option value="CNY">CNY (Luane Chinês, Renmimbi ou Yuan)</option> 
+        <option value="COP">COP (Peso Colombiano)</option> 
+        <option value="CZK">CZK (Coroa Tcheca)</option> 
+        <option value="DKK">DKK (Coroa Dinamarquesa)</option> 
+        <option value="DOP">DOP (Peso Domimicano)</option> 
+        <option value="EGP">EGP (Libra Egípcia)</option> 
+        <option value="EUR">EUR (Euro)</option> 
+        <option value="FJD">FJD (Dólar Fijiano)</option> 
+        <option value="GBP">GBP (Libra Esterlina)</option> 
+        <option value="GTQ">GTQ (Quetzal Guatemalteco)</option> 
+        <option value="HKD">HKD (Dólar de Hong Kong)</option> 
+        <option value="HRK">HRK (Kuna Croata)</option> 
+        <option value="HUF">HUF (Florim Húngaro)</option> 
+        <option value="IDR">IDR (Rupia Indonésia)</option> 
+        <option value="ILS">ILS (Novo Siclo Israelita)</option> 
+        <option value="INR">INR (Rupia Indiana)</option> 
+        <option value="ISK">ISK (Coroa Islandesa)</option> 
+        <option value="JPY">JPY (Yen Japonês)</option> 
+        <option value="KRW">KRW (Won Sul-Coreano)</option> 
+        <option value="KZT">KZT (Tengue Cazaque)</option> 
+        <option value="MVR">MVR (Rupia Maldívia)</option> 
+        <option value="MXN">MXN (Peso Mexicano)</option> 
+        <option value="MYR">MYR (Rynguite Malaio)</option> 
+        <option value="NOK">NOK (Coroa Norueguesa)</option> 
+        <option value="NZD">NZD (Dólar de Nova Zelândia)</option> 
+        <option value="PAB">PAB (Balboa Panamense)</option> 
+        <option value="PEN">PEN (Novo Sol Peruano)</option> 
+        <option value="PHP">PHP (Peso Filipino)</option> 
+        <option value="PKR">PKR (Rubia Paquistanesa)</option> 
+        <option value="PLN">PLN (Zlóti Polaco)</option> 
+        <option value="PYG">PYG (Guarani Paraguaio)</option> 
+        <option value="RON">RON (Leu Romeno)</option> 
+        <option value="RUB">RUB (Rublo Russo)</option> 
+        <option value="SAR">SAR (Rial Saudita)</option> 
+        <option value="SEK">SEK (Coroa Sueca)</option> 
+        <option value="SGD">SGD (Dólar de Cingapura)</option> 
+        <option value="THB">THB (Baht Tailandês)</option> 
+        <option value="TRY">TRY (Lira Turca)</option> 
+        <option value="TWD">TWD (Novo Dólar de Taiwan)</option> 
+        <option value="UAH">UAH (Grívnia Ucraniana)</option> 
+        <option value="UYU">UYU (Peso Uruguaio)</option> 
+        <option value="ZAR">ZAR (Rand Sul-Africano)</option> 
+        </select> 
+        </div>
+       </div> 
+    <div class="col-sm-6"> 
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Para</span> 
+    </div>
+        <select class="form-control to" id="sel2"> 
+        <option value="">Escolha um …</option> 
+       <option value="USD">USD (Dólar Americano)</option> 
+        <option value="AED">AED (Dirrame dos Emirados Árabes Unidos)</option> 
+        <option value="ARS">ARS (Peso Argentino)</option> 
+        <option value="AUD">AUD (Dólar Australiano)</option> 
+        <option value="BGN">BGN (Lev Búlgaro)</option> 
+        <option value="BRL">BRL (Real Brasileiro)</option> 
+        <option value="BSD">BSD (Dólar Baamense)</option> 
+        <option value="CAD">CAD (Dólar Canadense)</option> 
+        <option value="CHF">CHF (Franco Suíço)</option> 
+        <option value="CLP">CLP (Peso Chileno)</option> 
+        <option value="CNY">CNY (Luane Chinês, Renmimbi ou Yuan)</option> 
+        <option value="COP">COP (Peso Colombiano)</option> 
+        <option value="CZK">CZK (Coroa Tcheca)</option> 
+        <option value="DKK">DKK (Coroa Dinamarquesa)</option> 
+        <option value="DOP">DOP (Peso Domimicano)</option> 
+        <option value="EGP">EGP (Libra Egípcia)</option> 
+        <option value="EUR">EUR (Euro)</option> 
+        <option value="FJD">FJD (Dólar Fijiano)</option> 
+        <option value="GBP">GBP (Libra Esterlina)</option> 
+        <option value="GTQ">GTQ (Quetzal Guatemalteco)</option> 
+        <option value="HKD">HKD (Dólar de Hong Kong)</option> 
+        <option value="HRK">HRK (Kuna Croata)</option> 
+        <option value="HUF">HUF (Florim Húngaro)</option> 
+        <option value="IDR">IDR (Rupia Indonésia)</option> 
+        <option value="ILS">ILS (Novo Siclo Israelita)</option> 
+        <option value="INR">INR (Rupia Indiana)</option> 
+        <option value="ISK">ISK (Coroa Islandesa)</option> 
+        <option value="JPY">JPY (Yen Japonês)</option> 
+        <option value="KRW">KRW (Won Sul-Coreano)</option> 
+        <option value="KZT">KZT (Tengue Cazaque)</option> 
+        <option value="MVR">MVR (Rupia Maldívia)</option> 
+        <option value="MXN">MXN (Peso Mexicano)</option> 
+        <option value="MYR">MYR (Rynguite Malaio)</option> 
+        <option value="NOK">NOK (Coroa Norueguesa)</option> 
+        <option value="NZD">NZD (Dólar de Nova Zelândia)</option> 
+        <option value="PAB">PAB (Balboa Panamense)</option> 
+        <option value="PEN">PEN (Novo Sol Peruano)</option> 
+        <option value="PHP">PHP (Peso Filipino)</option> 
+        <option value="PKR">PKR (Rubia Paquistanesa)</option> 
+        <option value="PLN">PLN (Zlóti Polaco)</option> 
+        <option value="PYG">PYG (Guarani Paraguaio)</option> 
+        <option value="RON">RON (Leu Romeno)</option> 
+        <option value="RUB">RUB (Rublo Russo)</option> 
+        <option value="SAR">SAR (Rial Saudita)</option> 
+        <option value="SEK">SEK (Coroa Sueca)</option> 
+        <option value="SGD">SGD (Dólar de Cingapura)</option> 
+        <option value="THB">THB (Baht Tailandês)</option> 
+        <option value="TRY">TRY (Lira Turca)</option> 
+        <option value="TWD">TWD (Novo Dólar de Taiwan)</option> 
+        <option value="UAH">UAH (Grívnia Ucraniana)</option> 
+        <option value="UYU">UYU (Peso Uruguaio)</option> 
+        <option value="ZAR">ZAR (Rand Sul-Africano)</option> 
+        </select>
+        </div>
+       </div>
+      </div>
+      <div class="text-center"> 
+          <!-- convert button --> 
+      <button class="btn btn-primary convert m-2" type="submit"> Converter </button> 
+          <!-- reset button --> 
+      <button class="btn btn-primary m-2" onclick="clearVal()"> Reverter </button> 
+      </div>
+     </div>
+      <div id="finalAmount" class="text-center">     
+         <!-- Display the converted amount --> 
+      <h2>Resultado : 
+      <span class="finalValue" style="color:green;"> </span> 
+      </h2> 
+      </div> 
+     </div>
+     <script src="moeda.js"></script> 
+</body>
+</html>
